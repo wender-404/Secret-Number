@@ -11,8 +11,8 @@ $ apt install ruby
 $ apt install git 
 $ git clone https://github.com/Dreifus-404/Secret-Number
 $ cd Secret-Number
-$ chmod +x start.rb
-$ ruby start.rb
+$ chmod +x install.py
+$ python3 install.py
 
 [~#] Agradecimentos
 
