@@ -3,7 +3,7 @@
 
 $ Este É Um Jogo Direcionado Para Terminais Seja La Qual For ele
 $ O Intuito Do Jogo é Entreter o Jogador
-$ Ao iniciar o Jogo Você receber as Instruções
+$ Ao iniciar o Jogo Você vai receber as Instruções
 
 [~#] Comandos
 
