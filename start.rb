@@ -74,7 +74,6 @@ for game in 1.. + mt.to_i
   puts "\n"
   puts "•attempt• > " + game.to_s
   puts "[>] Chute o Numero Secreto"
-  puts ns
   puts "\n"
   ct = gets.to_i
   puts "\n"
