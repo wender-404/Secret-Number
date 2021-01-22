@@ -1,13 +1,13 @@
 #Jogo :)
 def ex
   system "clear"
-  puts "                       [$] introduction"
+  puts "\e[33m                       [$] introduction"
   puts "\n\n"
-  puts "~$ Este Jogo Consiste em Tentar Acertar Um Numero Secreto"
-  puts "~$ A Quantidade De Chances Vai Depender Do Level Que Vc Escolher"
-  puts "~$ Se Voce errar Todos Os Numeros, No Fim O Numero Secreto Sera Revelado"
-  puts "~$ Espero Que Se Divirta Tenha Um Otimo Jogo"
-  puts "~$ Code By Dreifus and Sasaki"
+  puts "\e[33m~$ Este Jogo Consiste em Tentar Acertar Um Numero Secreto"
+  puts "\e[33m~$ A Quantidade De Chances Vai Depender Do Level Que Vc Escolher"
+  puts "\e[33m~$ Se Voce errar Todos Os Numeros, No Fim O Numero Secreto Sera Revelado"
+  puts "\e[33m~$ Espero Que Se Divirta Tenha Um Otimo Jogo"
+  puts "\e[33m~$ Code By Dreifus and Sasaki"
   puts "\n\n"
   puts "                   [$] Press Enter For Continue"
   puts "\n"
@@ -17,7 +17,7 @@ end
 def b1
   system "clear"
   puts "\n\n\n"
-  puts "   █۞███████]▄▄▄▄▄▄▄▄▄▄▃"
+  puts "\e[37m   █۞███████]▄▄▄▄▄▄▄▄▄▄▃"
   puts " ▂▄▅█████████▅▄▃▂…                   S E C R E T"
   puts "[███████████████████]                N U M B E R"
   puts "  ◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙"
@@ -35,21 +35,6 @@ def b2
   puts "                 [~$] Press Enter For Exit "
   puts "\n"
   gem = gets.to_i
-end
-def b3
-  puts "\n\n\n"
-  puts "   █۞███████]▄▄▄▄▄▄▄▄▄▄▃"
-  puts " ▂▄▅█████████▅▄▃▂…                     B A C K"
-  puts "[███████████████████]               P R O G R A M"
-  puts "  ◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙"
-  puts "---------------------------------------------------"
-  puts "\n\n"
-  puts "                [$] Press 1 For Restart"
-  puts "\n\n"
-  puts "                [$] Press Enter For Exit"
-  puts "\n\n"
-  sr = gets.to_i
-  return sr
 end
 def lv
   puts "              [~$] Selec One Level"
@@ -89,17 +74,12 @@ for game in 1.. + mt.to_i
   puts "\n"
   puts "•attempt• > " + game.to_s
   puts "[>] Chute o Numero Secreto"
+  puts ns
   puts "\n"
   ct = gets.to_i
   puts "\n"
   if ct == ns
-    system "clear"
-    puts "\n\n"
-    puts "\n\n\n"
-    b1()
-    puts "                 [√] Parabêns Você Acertou"
-    b2()
-    b1()
+    test = true
     break
     end
   if ct != ns
@@ -115,7 +95,16 @@ for game in 1.. + mt.to_i
   end
 if test == false
   b1()
-  puts "•O Numero Secreto Era• > #{ns}"
+  puts "\e[1;31m•O Numero Secreto Era• > #{ns}"
+  b2()
+  b1()
+end
+if test == true
+  system "clear"
+  puts "\n\n"
+  puts "\n\n\n"
+  b1()
+  puts "\e[1;32m                 [√] Parabêns Você Acertou"
   b2()
   b1()
 end
