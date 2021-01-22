@@ -14,6 +14,26 @@ def ex
   inicio = gets
   system "clear"
 end
+def tl
+  system 'clear'
+  puts "\e[32m|                       A J U S T E _ A _ T E L A                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\e[32m|                                                                          |"
+  puts "\n\n"
+  puts "[~$] And Press Enter For Continue"
+  puts "\n"
+  a = gets
+end
 def b1
   system "clear"
   puts "\n\n\n"
@@ -47,6 +67,7 @@ def lv
   return level
 end
 #Execuçōes de Defs :)
+tl
 ex
 b1
 level = lv
