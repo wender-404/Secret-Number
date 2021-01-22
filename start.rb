@@ -115,7 +115,7 @@ for game in 1.. + mt.to_i
   end
 if test == false
   b1()
-  puts "\e[1;31m•O Numero Secreto Era• > #{ns}"
+  puts "\e[1;31m•O Numero Secreto Era• > " "\e[32m#{ns}"
   b2()
   b1()
 end
