@@ -119,7 +119,7 @@ end
 
 if player == true
      banner_1()
-     puts "[\e[32m√\e[0m] Parabêns Você Acertou!"
+     puts "[\e[32m√\e[0m] Parabêns Você Acertou!\e[1;32m"
      banner_2()
      program_credits()
      banner_1()
