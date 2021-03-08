@@ -11,6 +11,7 @@ if [ -f start.rb ]; then
         fi
     else
          echo -e "[\e[31mX\e[0m] ERRO CONECTION NOT FOUND!"
+    fi
 else
     echo -e "[\e[31mX\e[0m] Erro \e[32mstart.rb\e[0m NOT FOUND!"
 fi
