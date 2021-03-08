@@ -7,7 +7,7 @@ if [ -f start.rb ]; then
             ruby start.rb
         else
             chmod a+x start.rb
-            ./start.rb
+            ruby start.rb
         fi
     else
          echo -e "[\e[31mX\e[0m] ERRO CONECTION NOT FOUND!"
