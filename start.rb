@@ -86,14 +86,13 @@ end
 
 banner_1()
 
-secret_number = rand(max)
+secret_number = rand(max.to_i)
 puts "•Mode• > #{ll}"
 puts "•attempts• > #{mt}"
 
 for game in 1..mt
     puts "\n•attempt• > #{game}"
     puts "[\e[32m>\e[0m] Chute o numero secreto"
-    puts secret_number
     puts "\n"
     chute_number = gets.to_i
     if chute_number == secret_number
