@@ -10,6 +10,18 @@ def program_credits()
     system "sleep 6"
 end
 
+def back_program()
+    system "clear"
+    puts "\e[0m┌─────────────────────────┐"
+    puts "|   Deseja Continuar-[?]  |"
+    puts "│                         |"
+    puts "|      1-yes / 2-no       |"
+    puts "|                         |"
+    puts "└─────────────────────────"
+    print "-> "
+    exit = gets.to_i
+end
+
 def explication_game()
     system "clear"
     puts "\e[0;33m                       [$] introduction"
@@ -44,7 +56,7 @@ def banner_2()
     puts "                  █░░░▀░░░▄▄▄▄▄░░██░▀▀░█"
     puts "                   ▀▄▄▄▄▄▀─────▀▄▄▄▄▄▄▀"
     puts "\n\n"
-    puts "                 [~$] Press Enter For Exit "
+    puts "               [~$] Press Enter For Continue "
     puts "\n"
     gem = gets.to_i
 end
@@ -55,7 +67,7 @@ def level_select()
     puts "[1] Low"
     puts "[2] Normal"
     puts "[3] Hard"
-    puts "\n"
+    print "\n>> "
     level = gets.to_i
     return level
 end
@@ -93,7 +105,7 @@ puts "•attempts• > #{mt}"
 for game in 1..mt
     puts "\n•attempt• > #{game}"
     puts "[\e[32m>\e[0m] Chute o numero secreto"
-    puts "\n"
+    print "> "
     chute_number = gets.to_i
     if chute_number == secret_number
         player = true
@@ -102,7 +114,7 @@ for game in 1..mt
         player = false
         puts "\n[\e[31mX\e[0m] Você errou!"
         if secret_number > chute_number
-	    puts "> O Numero Secreto é maior \n"
+            puts "> O Numero Secreto é maior \n"
         else
             puts "> O Numero Secreto é menor \n"
         end
@@ -113,15 +125,24 @@ if player == false
      banner_1()
      puts "\e[1;31mO numero secreto era > \e[1;32m#{secret_number}\e[1;31m"
      banner_2()
-     program_credits()
-     banner_1()
+     back = back_program()
+     if back == 1 or back == 01
+         system "ruby start.rb"
+     else
+         program_credits()
+         system "exit 1"
+     end
 end
 
 if player == true
      banner_1()
      puts "[\e[32m√\e[0m] Parabêns Você Acertou!\e[1;32m"
      banner_2()
-     program_credits()
-     banner_1()
+     back = back_program()
+     if back == 1 or back == 01
+         system "ruby start.rb"
+     else
+         program_credits()
+         system "exit 1"
+     end
 end
-
