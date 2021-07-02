@@ -1,28 +1,27 @@
-# Secret-Number
+------------ description ------------
 
---- Introdução ---
+# Este e um mini jogo para terminal linux, feito em ruby
+# O jogo consiste em acertar um numero secreto (Secret-Numbee)
+# O jogo possui diferentes dificuldades e o tanto de tentativas vai depender da mesma
+# Caso erre todas as tentativas o numero secreto sera revelado ao final
 
-$ Este É Um Jogo Direcionado Para Terminais Seja La Qual For ele
-$ O Intuito Do Jogo é Entreter o Jogador
-$ Ao iniciar o Jogo Você vai receber as Instruções
+              ------------ languages ------------
 
---- Comandos ---
+# Ruby
+# Shellscript
 
-$ apt install ruby
-$ apt install git 
-$ git clone https://github.com/Dreifus-404/Secret-Number
-$ cd Secret-Number
-$ chmod +x install.sh
-$ bash
+             ------------ instalation ------------
 
---- Agradecimentos ---
+# cd ~/
+# apt install git -y
+# git clone https://github.com/Dreifus-404/Secret-Number
+# cd Secret-Number
+# chmod +x install.sh
+# bash install.sh
 
-~Sysb1n
-~Sasaki
-~D5K5
+              ------------ credits ------------
 
-tmj familia :)
-
---- Fim ---
-
-~$ Espero Que se divirta!
+# Secret Valt root team
+# Coded by Dreifus
+# Canal no youtube:  Dreifus-404
+# Conta na github:  https://github.com/Dreifus-404
