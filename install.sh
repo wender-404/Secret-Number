@@ -1,20 +1,75 @@
 #!/bin/bash
 
-clear
-cd $PREFIX/bin # caminho onde ficam os pacotes instalados
+# Autor     : Dreifus-404 <github.com/Dreifus-404>
+# Versão    : 0.1
+# Descrição : Programa de configuração da ferramenta
 
-if test -x ruby; then
-    echo -e "\e[32mThe ruby ​​package is installed\n starting the game..."; sleep 3
-    cd ~/Secret-Number; ruby game.rb
-else
-    echo -e "\e[1;31m The ruby ​​package is not installed\e[0m\n[...] \e[32minstalling..."
-    apt-get install ruby -y > /dev/null
-    if test $? -eq 0; then
-        echo -e "\e[32m The ruby ​​package has been installed\e[0m\starting the game..."; sleep 3
-        cd ~/Secret-Number; ruby game.rb
-    
+function verify_python {
+    cd $PREFIX/lib
+    clear
+
+    if [ -d "python3.10" ]
+    then
+        echo -e " \e[1;32m[+] Python isn't installed!\e[0m"
+        echo -e " \e[33m[•] Loading program...\e[0m\n"
+
+        sleep 3
+
+        cd ~/Secret-Number
+        python secret_number.py
+
+
     else
-        clear; cd ~/Secret-Number
-        echo -e "\e[1;31m it was not possible to install ruby\e[0m\nrum \e[33mpkg install ruby -y\e[0m and rejoin the installation file again"
-     fi
-fi
+        echo -e " \e[1;31m[-] Python can't be installed, Installing it...\e[0m\a\n$(sleep 0.5)"
+
+        if apt-get install python -y > /dev/null
+        then
+            echo -e " \e[1;32m[+] Python isn't installed!\e[0m"
+            echo -e " \e[33m[•! Loading program...\e[0m\n"
+
+            sleep 3
+
+            cd ~/Secret-Number
+            python secret_number.py
+
+
+        else
+            echo -e " \e[1;34mErrp verify your connection and try gain latter\a\n"
+            sleep 2
+        fi
+    fi
+}
+
+
+function verify_kalischemes {
+    Cinstall=( "\nEste codigo utiliza o tema 02 da ferramenta [kalischemes4termux]\n"
+           "----[ deseja instalar a ferramenta Para ter uma melhor performace? ]" )
+
+    message=`echo -e ${Cinstall[*]}`
+
+
+    if [ `cat .ocult` -eq 1 ]
+    then
+
+        if whiptail --title "Install Kali Shemes" --yesno "$message" 8 80
+        then
+            clear
+            bash __modules__/Kschemes.sh
+            echo "0" > ~/Secret-Number/.ocult
+
+
+        else
+            echo "0" > ~/Secret-Number/.ocult
+        fi
+
+    fi
+
+}
+
+chmod +x __modules__/InfoG.sh
+chmod +x __modules__/Kschemes.sh
+
+verify_kalischemes
+verify_python
+
+rm -rf ~/Secret-Number/install.sh
