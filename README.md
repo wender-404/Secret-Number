@@ -26,4 +26,5 @@ chmod +x install.sh
 
 ./install.sh
 
-@ Leia o README.md
+ @ Leia o README.md
+ -------------------
