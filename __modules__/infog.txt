@@ -1,0 +1,8 @@
+
+~$ Secret Number é um mini game feito em Python
+~$ Seu objetivo é acertar um numero secreto e desbloquear o android!!
+~$ O jogo possui 4 modos e o numero de rounds vai de acordo com o modo
+~$ Quanto maior a dificuldade mais dificil fica, arrisca o Impossible?
+
+
+>> Pressione enter para continuar
