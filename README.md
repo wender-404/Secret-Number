@@ -13,7 +13,7 @@ Linguagem : Python3.10 e Shellscrit
  Este é um mini jogo feito em Python3 e Shellscript o objetivo é
 acertar o numero secreto e destravar o android!!
 
- @ Instalation - OS linux
+ @ Instalação - OS linux
  -------------------------
 
 apt-get install git -y
