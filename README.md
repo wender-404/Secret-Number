@@ -17,7 +17,11 @@ acertar o numero secreto e destravar o android!!
  -------------------------
 
 apt-get install git -y
+
 git clone https://github.com/Dreifus-404/Secret-Number
+
 cd Secret-Number
+
 chmod +x install.sh
+
 ./install.sh
