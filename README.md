@@ -25,3 +25,5 @@ cd Secret-Number
 chmod +x install.sh
 
 ./install.sh
+
+@ Leia o README.md
