@@ -1,27 +1,23 @@
------------- description ------------
+# Secret-Number Game for terminal :)
 
-# Este e um mini jogo para terminal linux, feito em ruby
-# O jogo consiste em acertar um numero secreto (Secret-Number)
-# O jogo possui diferentes dificuldades e o tanto de tentativas vai depender da mesma
-# Caso erre todas as tentativas o numero secreto sera revelado ao final
+ @ Informações
+ --------------
 
-              ------------ languages ------------
+Autor     : Dreifus-404
+Versão    : 1.0
+Linguagem : Python3.10 e Shellscrit
 
-# Ruby
-# Shellscript
+ @ Descrição
+ ------------
 
-             ------------ instalation ------------
+ Este é um mini jogo feito em Python3 e Shellscript o objetivo é
+acertar o numero secreto e destravar o android!!
 
-# cd ~/
-# apt install git -y
-# git clone https://github.com/Dreifus-404/Secret-Number
-# cd Secret-Number
-# chmod +x install.sh
-# bash install.sh
+ @ Instalation - OS linux
+ -------------------------
 
-              ------------ credits ------------
-
-# Secret Valt root team
-# Coded by Dreifus
-# Canal no youtube:  Dreifus-404
-# Conta na github:  https://github.com/Dreifus-404
+apt-get install git -y
+git clone https://github.com/Dreifus-404/Secret-Number
+cd Secret-Number
+chmod +x install.sh
+./install.sh
