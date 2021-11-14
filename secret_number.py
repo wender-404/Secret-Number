@@ -271,7 +271,7 @@ class func:
 
             for game in range(0, infoG[2]):
                 try:
-                    Cnumber = int(input(f"Snumber <{Snumber}/{game+1}> "))
+                    Cnumber = int(input(f"Snumber </{game+1}> "))
 
                 except:
                     Cnumber = 0
