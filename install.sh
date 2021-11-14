@@ -47,23 +47,11 @@ function verify_kalischemes {
 
     message=`echo -e ${Cinstall[*]}`
 
-
-    if [ `cat .ocult` -eq 1 ]
+    if whiptail --title "Install Kali Shemes" --yesno "$message" 8 80
     then
-
-        if whiptail --title "Install Kali Shemes" --yesno "$message" 8 80
-        then
-            clear
-            bash __modules__/Kschemes.sh
-            echo "0" > ~/Secret-Number/.ocult
-
-
-        else
-            echo "0" > ~/Secret-Number/.ocult
-        fi
-
+        clear
+        bash __modules__/Kschemes.sh
     fi
-
 }
 
 chmod +x __modules__/InfoG.sh
