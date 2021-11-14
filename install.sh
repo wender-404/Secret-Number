@@ -71,5 +71,3 @@ chmod +x __modules__/Kschemes.sh
 
 verify_kalischemes
 verify_python
-
-rm -rf ~/Secret-Number/install.sh
