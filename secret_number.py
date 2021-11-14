@@ -14,7 +14,7 @@
       Linguagem         : Python3.10
       Nova versão       : 1.0
       Velha versão      : 0.3
-      Lines/Words/Char  : 319/764/10566 - (ALT+D | GNU nano)
+      Lines/Words/Char  : 317/764/10566 - (ALT+D | GNU nano)
 
 @ Variaveis
 -------------
@@ -77,8 +77,8 @@ class func:
                 time.sleep(4)
 
 
-        Sys_Banner()
         os.system("bash __modules__/InfoG.sh")
+        Sys_Banner()
 
 
     def loading_Banner():
