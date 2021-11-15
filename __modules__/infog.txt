@@ -1,4 +1,10 @@
 
+   █۞███████]▄▄▄▄▄▄▄▄▄▄▃
+ ▂▄▅█████████▅▄▃▂…                       S E C R E T
+[███████████████████]                    N U M B E R
+  ◥⊙▲⊙▲⊙▲⊙▲⊙▲⊙▲⊙
+----------------------------------------------------------
+
 ~$ Secret Number é um mini game feito em Python
 ~$ Seu objetivo é acertar um numero secreto e desbloquear o android!!
 ~$ O jogo possui 4 modos e o numero de rounds vai de acordo com o modo
