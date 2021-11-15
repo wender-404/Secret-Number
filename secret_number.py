@@ -14,7 +14,7 @@
       Linguagem         : Python3.10
       Nova versão       : 1.0
       Velha versão      : 0.3
-      Lines/Words/Char  : 317/764/10566 - (ALT+D | GNU nano)
+      Lines/Words/Char  : 353/841/11415 - (ALT+D | GNU nano)
 
 @ Variaveis
 -------------
@@ -40,6 +40,24 @@
 import os
 import time
 import random
+
+# Class Matrix, onde esta a matrix utilizada no final do jogo
+
+class matrix:
+    def banner():
+        os.system("clear")
+        lines = 0
+
+        while True:
+            print(f" " * random.randint(12, 50) + f"\033[{random.randint(41, 47)};30m$\033[0m")
+            time.sleep(0.1)
+
+            lines += 1
+
+            if lines > 120:
+                time.sleep(1)
+                break
+
 
 # Class func, onde estarão as funções do codigo
 
@@ -74,11 +92,79 @@ class func:
 
             for j in range(0, 6): # Imprimir banner_2
                 print(banner_2[j])
-                time.sleep(4)
+                time.sleep(3)
 
 
         os.system("bash __modules__/InfoG.sh")
         Sys_Banner()
+
+
+    def game_win(Snumber):
+        matrix.banner()
+        os.system("clear")
+
+        banner_1 = [ '   ╲    ╱',
+                     '   ╱▔▔▔▔╲',
+                     '  ┃┈▇┈┈▇┈┃',
+                     '╭╮┣━━━━━━┫╭╮',
+                     '┃┃┃      ┃┃┃',
+                     '╰╯┃      ┃╰╯',
+                     '  ╰┓┏━━┓┏╯',
+                     '   ╰╯  ╰╯',
+                     '---------------------------------------------------------------------\n' ]
+
+        banner_2 = [ "> ---[ \033[1;34mNumero secreto descoberto\033[0m ]",
+                    f">     [!] Android Destravado, Numero Secreto : \033[1;32m{Snumber}\033[0m\a\n",
+                     "> ---[ \033[1;34mIniciando Attack DDoS\033[0m ]",
+                     ">     [!] Attack DDoS concluido!\a\n",
+                     ">         [\033[32mGAME WIN!!!\033[0m]\a\n" ]
+
+
+        for x in range(0, 9):
+            print(banner_1[x])
+            time.sleep(0.5)
+
+        time.sleep(1)
+
+        for x in range(0, 5):
+            print(banner_2[x])
+            time.sleep(4)
+
+        time.sleep(2)
+
+
+    def game_over(Snumber):
+        matrix.banner()
+        os.system("clear")
+
+        banner_1 = [ '   ╲    ╱',
+                     '   ╱▔▔▔▔╲',
+                     '  ┃┈▇┈┈▇┈┃',
+                     '╭╮┣━━━━━━┫╭╮',
+                     '┃┃┃      ┃┃┃',
+                     '╰╯┃      ┃╰╯',
+                     '  ╰┓┏━━┓┏╯',
+                     '   ╰╯  ╰╯',
+                     '---------------------------------------------------------------------\n' ]
+
+        banner_2 = [ '> ---[ \033[1;34mErro, Utilizando Hack1.apk\033[0m ]',
+                    f'>     [\033[1;31m!\033[0m] O numero secreto era \033[1;32m{Snumber}\033[0m\a\n',
+                     '> ---[ \033[1;34mIniciando Ataque DDoS\033[0m ]',
+                     '>     [\033[1;35m!\033[0m] Impossivel completar ataque\a\n',
+                     '> ---[ \033[1;34mImpossivel continuar procedimento!!\033[0m ]',
+                     '>     [\033[1;33mGAME OVER!!!\033[0m]\a\n' ]
+
+        for x in range(0, 9):
+            print(banner_1[x])
+            time.sleep(0.5)
+
+        time.sleep(1)
+
+        for x in range(0, 6):
+            print(banner_2[x])
+            time.sleep(4)
+
+        time.sleep(2)
 
 
     def loading_Banner():
@@ -140,6 +226,11 @@ class func:
                         break
 
 
+                except EOFError:
+                    os.system("clear")
+                    raise EOFError("jogo fechado")
+
+
                 except:
                      time.sleep(0.5)
 
@@ -164,69 +255,17 @@ class func:
             return level
 
 
+        except EOFError:
+            os.system("clear")
+            raise EOFError("codigo fechado")
+
+
         except:
             level = error_level(banner, credits_Banner)
             return level
 
 
-
     def game_start(get_Level, credits_Banner):
-        def game_win(Snumber):
-            banner_1 = [ '   ╲    ╱',
-                         '   ╱▔▔▔▔╲',
-                         '  ┃┈▇┈┈▇┈┃',
-                         '╭╮┣━━━━━━┫╭╮',
-                         '┃┃┃      ┃┃┃',
-                         '╰╯┃      ┃╰╯',
-                         '  ╰┓┏━━┓┏╯',
-                         '   ╰╯  ╰╯',
-                         '---------------------------------------------------------------------\n' ]
-
-            banner_2 = [ "> ---[ \033[1;32mParabéns Você acertou o numero secreto\033[0m ]",
-                         f">     [!] Android Destravado, Numero Secreto : \033[1;32m{Snumber}\033[0m\n" ]
-
-
-            for x in range(0, 9):
-                print(banner_1[x])
-                time.sleep(0.5)
-
-            time.sleep(1)
-
-            for x in range(0, 2):
-                print(banner_2[x])
-                time.sleep(1)
-
-            time.sleep(2)
-
-
-        def game_over(Snumber):
-            banner_1 = [ '   ╲    ╱',
-                         '   ╱▔▔▔▔╲',
-                         '  ┃┈▇┈┈▇┈┃',
-                         '╭╮┣━━━━━━┫╭╮',
-                         '┃┃┃      ┃┃┃',
-                         '╰╯┃      ┃╰╯',
-                         '  ╰┓┏━━┓┏╯',
-                         '   ╰╯  ╰╯',
-                         '---------------------------------------------------------------------\n' ]
-
-            banner_2 = [ '> ---[ \033[1;34mPolicia federal pegou seus dados\033[0m ]',
-                         f'>     [\033[1;31m!\033[0m] O numero secreto era \033[1;32m{Snumber}\033[0m\n',
-                         '> ---[\033[1;31mGAME OVER\033[0m]' ]
-
-            for x in range(0, 9):
-                print(banner_1[x])
-                time.sleep(0.5)
-
-            time.sleep(1)
-
-            for x in range(0, 3):
-                print(banner_2[x])
-                time.sleep(4)
-
-            time.sleep(2)
-
-
         def game_Banner(infoG):
             main_banner = [ '                         @ Secret Number [info.]                   ',
                             '                       ---------------------------\n               ',
@@ -292,16 +331,8 @@ class func:
 
             os.system("clear")
 
-            if result_game:
-                game_win(Snumber)
+        return [Snumber, result_game]
 
-            else:
-                game_over(Snumber)
-
-
-        else:
-            os.system("clear")
-            raise EOFError("codigo fechado")
 
 # Classe main, responsavel pela execução das funções
 
@@ -311,7 +342,12 @@ class __main__:
     func.loading_Banner()
     func.credits_Banner()
 
-    func.game_start(func.get_Level, func.credits_Banner)
+    info = func.game_start(func.get_Level, func.credits_Banner)
 
+    if info[1]:
+        func.game_win(info[0])
+
+    else:
+        func.game_over(info[0])
 
 __main__ # Fim
